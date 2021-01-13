@@ -168,7 +168,7 @@
                 });
             },
             registerSuccess() {
-                this.redirect("/home")
+                this.redirect("/dashboard")
             }
         },
     };

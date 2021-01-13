@@ -13,24 +13,9 @@
         </div>
       </a>
       <a href="https://www.creative-tim.com" class="simple-text logo-normal" target="_blank">
-        <template v-if="$route.meta.rtlActive">{{ rtlTitle }}</template>
+        <template v-if="meta.rtlActive">{{ rtlTitle }}</template>
         <template v-else>{{ title }}</template>
       </a>
-<!--      <div class="navbar-minimize">-->
-<!--        <md-button-->
-<!--          id="minimizeSidebar"-->
-<!--          class="md-round md-just-icon md-transparent"-->
-<!--          @click="minimizeSidebar"-->
-<!--        >-->
-<!--          <i class="material-icons text_align-center visible-on-sidebar-regular"-->
-<!--            >more_vert</i-->
-<!--          >-->
-<!--          <i-->
-<!--            class="material-icons design_bullet-list-67 visible-on-sidebar-mini"-->
-<!--            >view_list</i-->
-<!--          >-->
-<!--        </md-button>-->
-<!--      </div>-->
     </div>
     <div class="sidebar-wrapper" ref="sidebarScrollArea">
       <slot></slot>
@@ -106,8 +91,15 @@ export default {
       default: true
     }
   },
+  data() {
+    return {
+      meta: {
+        rtlActive: false
+      }
+    };
+  },
   created() {
-    this.$sidebar.toggleMinimize();
+    // this.$sidebar.toggleMinimize();
   },
   provide() {
     return {

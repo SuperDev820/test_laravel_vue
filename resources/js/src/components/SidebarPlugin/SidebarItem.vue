@@ -77,8 +77,8 @@ export default {
           name: "",
           icon: "",
           image: "",
-          path: "",
-          children: []
+          path: "",   
+          children: [],
         };
       }
     }
@@ -104,7 +104,8 @@ export default {
   },
   computed: {
     baseComponent() {
-      return this.isMenu || this.link.isRoute ? "li" : "router-link";
+      // return this.isMenu || this.link.isRoute ? "li" : "router-link";
+      return this.isMenu || true ? "li" : "router-link";
     },
     linkPrefix() {
       if (this.link.name) {
@@ -139,7 +140,8 @@ export default {
       tabs.splice(index, 1);
     },
     elementType(link, isParent = true) {
-      if (link.isRoute === false) {
+      // if (link.isRoute === false) {
+      if (true) {
         return isParent ? "li" : "a";
       } else {
         return "router-link";

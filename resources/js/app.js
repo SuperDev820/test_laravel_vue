@@ -33,6 +33,7 @@ Vue.prototype.$Chartist = Chartist;
 
 Vue.component('login', require('./src/containers/Login.vue').default);
 Vue.component('register', require('./src/containers/Register.vue').default);
+Vue.component('dashboard', require('./src/containers/Dashboard.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

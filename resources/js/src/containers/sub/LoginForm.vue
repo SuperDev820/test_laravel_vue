@@ -104,7 +104,7 @@
             });
         },
         loginSuccess() {
-            this.redirect("/home")
+            this.redirect("/dashboard")
         }
     },
   };

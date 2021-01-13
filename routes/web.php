@@ -30,4 +30,5 @@ Route::post('/register', [App\Http\Controllers\Auth\RegisterController::class, '
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 });
